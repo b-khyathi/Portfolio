@@ -1,19 +1,22 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ROUTES_CONFIG } from 'Constants'
-import SideNav from 'components/sidenav'
+import SideNav from 'components/sidenav';
+import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
-    <SideNav />
-    <Routes>
-      {
-        ROUTES_CONFIG.map(route => (<Route path={route.path} element={<route.Component />}>
-        </Route>))
-      }
-      
-    </Routes>
-  </BrowserRouter>
+    <div className='background'>
+      <BrowserRouter>
+      <SideNav />
+      <Routes>
+        {
+          ROUTES_CONFIG.map(route => (<Route path={route.path} element={<route.Component />}>
+          </Route>))
+        }
+        
+      </Routes>
+    </BrowserRouter>
+  </div>
   )
 }
 

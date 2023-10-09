@@ -4,3 +4,9 @@
   font-family: 'Ubuntu', sans-serif;
   box-sizing: border-box;
 }
+
+body{
+  background: url('assets/bg.jpeg') no-repeat fixed;
+  background-size: cover;
+  
+}

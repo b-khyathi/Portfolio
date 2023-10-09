@@ -3,14 +3,12 @@ $active-color : red;
 
 .container{
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     color: white;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-
     .logo{
         display: flex;
         width: 50%;
@@ -48,7 +46,7 @@ $active-color : red;
 
         .navItem:hover{
             color: $active-color;
-            transition: 0.5s ease-out;
+            transition: 0.3s ease-in-out;
         }
 
         .active{
