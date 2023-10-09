@@ -56,7 +56,7 @@ const SideNav: FC = () => {
     }
 
     return (
-        <div className={`${styles.container} ${router.pathname !== NAV_ITEMS.home ? styles.dark : null}`}>
+        <div className={`${styles.container}`}>
             {renderLogo()}
             {renderNavItems()}
             {renderChangeLngButton()}
