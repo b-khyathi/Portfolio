@@ -6,7 +6,7 @@ import { NAV_ITEMS, USER } from 'Constants';
 import { Link, useLocation } from 'react-router-dom';
 
 const SideNav: FC = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const router = useLocation();
 
     const renderLogo = (): ReactElement => {
@@ -29,7 +29,7 @@ const SideNav: FC = () => {
         const items: ReactElement[] = [];
         Object.entries(NAV_ITEMS).forEach(([name, link]) => {
             items.push(
-                <Link className={`${styles.navItem} ${link===router.pathname ? styles.active : null}`} to={link}>{name}</Link>
+                <Link className={`${styles.navItem} ${link===router.pathname ? styles.active : null}`} to={link}>{t(`navItems.${name}`)}</Link>
             )
         })
         return (
@@ -39,10 +39,27 @@ const SideNav: FC = () => {
         );
     }
 
+    const langChan = (event: any) => {
+        console.warn(event.target.value)
+        i18n.changeLanguage(event.target.value);
+    }
+
+    const renderChangeLngButton = () => {
+        return(
+            <div className={styles.langBtn}>
+                <select name="lang"  onChange={langChan} value={i18n.language} >
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+        )
+    }
+
     return (
         <div className={`${styles.container} ${router.pathname !== NAV_ITEMS.home ? styles.dark : null}`}>
             {renderLogo()}
             {renderNavItems()}
+            {renderChangeLngButton()}
         </div>
     )
 }

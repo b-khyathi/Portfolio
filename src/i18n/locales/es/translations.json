@@ -1,6 +1,13 @@
 {
     "homepage": {
         "Arpit Dadhich": "Arpit Dadhich",
-        "designation": "Web Designer and Developer in Spanish"
+        "designation": "Diseñador y desarrollador web",
+        "quote": "Diseñar, codificar e innovar para dar forma al mundo digital con un toque completo."
+    },
+    "navItems": {
+        "home": "hogar",
+        "about": "acerca de",
+        "contact": "contacto",
+        "login": "acceso" 
     }
 }
