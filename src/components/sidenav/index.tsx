@@ -4,6 +4,7 @@ import logo from 'assets/my_icon.png';
 import { useTranslation } from 'react-i18next'
 import { NAV_ITEMS, USER } from 'Constants';
 import { Link, useLocation } from 'react-router-dom';
+import { Nav, Navbar } from 'react-bootstrap';
 
 const SideNav: FC = () => {
     const { t, i18n } = useTranslation();
@@ -29,13 +30,19 @@ const SideNav: FC = () => {
         const items: ReactElement[] = [];
         Object.entries(NAV_ITEMS).forEach(([name, link]) => {
             items.push(
-                <Link className={`${styles.navItem} ${link===router.pathname ? styles.active : null}`} to={link}>{t(`navItems.${name}`)}</Link>
+                <Nav.Link as={Link} className={`${styles.navItem} ${link === router.pathname ? styles.active : null}`}  to={link}>{t(`navItems.${name}`)}</Nav.Link>
             )
         })
         return (
-            <div className={styles.navList}>
-                {items.map((element: ReactElement) => element)}
-            </div>
+            <Navbar collapseOnSelect expand="lg" bg="transparent" sticky='top' variant="dark" className={styles.container}>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" className='ml-4 mt-4'/>
+                <Navbar.Brand  href="#home" className='ml-4 mt-2'>{renderLogo()}</Navbar.Brand>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className={`ml-auto ${styles.navItemsContainer}`}>
+                        {items.map((element: ReactElement) => element)  }
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 
@@ -45,9 +52,9 @@ const SideNav: FC = () => {
     }
 
     const renderChangeLngButton = () => {
-        return(
+        return (
             <div className={styles.langBtn}>
-                <select name="lang"  onChange={langChan} value={i18n.language} >
+                <select name="lang" onChange={langChan} value={i18n.language} >
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
                 </select>
@@ -56,12 +63,11 @@ const SideNav: FC = () => {
     }
 
     return (
-        <div className={`${styles.container}`}>
-            {renderLogo()}
-            {renderNavItems()}
-            {renderChangeLngButton()}
-        </div>
+        <>
+        {renderNavItems()}
+        {renderChangeLngButton()}
+        </>
     )
-}
-
+    }
+    
 export default SideNav

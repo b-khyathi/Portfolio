@@ -6,11 +6,9 @@ const HomeComponent: React.FC = () => {
     const {t} = useTranslation();
     return (
         <div className={styles.mainContainer}>
-            <div className={styles.detailsContainer}>
                 <div className={styles.quote}>
                     { t('homepage.quote') }
                 </div>
-            </div>
         </div>
     )
 }
