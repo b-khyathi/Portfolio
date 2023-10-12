@@ -9,5 +9,20 @@
         "about": "about",
         "contact": "contact",
         "login": "login"
+    },
+    "about": {
+        "title": "Who is Arpit?",
+        "subtitle": "A curiosity-driven Full Stack Developer crafting digital worlds with Angular, React, and Node.",
+        "bio-1": "Hey Visitor, I am a seasoned Full Stack Developer with a strong command of Angular, React, and Node.js. My expertise spans the entire web development spectrum, allowing me to seamlessly navigate both the front-end and back-end realms. With a commitment to staying abreast of industry trends, I am poised to contribute innovation and excellence to every project, providing robust and user-centric web applications.",
+        "bio-2": "Leveraging Angular and React, I craft engaging, responsive user interfaces that deliver exceptional user experiences. On the server side, I harness the power of Node.js to build scalable and efficient applications. Proficient in database management, API design, and version control, I ensure the entire development process is cohesive and well-structured. ",
+        "bio-3": "My problem-solving skills, combined with a knack for optimizing CI/CD pipelines, enable me to deliver high-quality, performance-driven solutions.I'm not available for any freelance work, but feel free to reach out and say hello! I promise I don't bite 😉",
+
+        "skills": {
+            "title": "SKILLS AND TOOLS",
+            "subtitle": "My Toolbox & Things I Can Do"
+        },
+        "experience": {
+            "title": "EXPERIENCE"
+        }
     }
 }

@@ -1,12 +1,191 @@
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
 
+.subTitle {
+    font-size: 40px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+
+    .detailsContainer {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 10px 10px 0 0;
+        padding: 1rem;
+        background-color: rgba(#f6e6e0, 0.8);
+        color: black;
+
+        .title {
+            font-weight: 600;
+            font-size: 40px;
+            color: black;
+        }
+
+        .bio {
+            display: flex;
+            // align-items: center;
+
+            flex-wrap: wrap;
+            .profilePic {
+                width: 300px;
+                height: 300px;
+                min-width: 300px;
+                min-height: 300px;
+                border: 2px solid black;
+                border-radius: 50%;
+            }
+
+            .aboutMe {
+                width: calc(90% - 300px);
+                font-size: 18px;
+                font-weight: 500;
+
+                .subtitle {
+                    font-size: 26px;
+                    font-weight: 500;
+                    color: blue;
+                }
+            }
+        }
+    }
+
+    .divider {
+        width: 90%;
+        height: 55px;
+
+        .divider-generic {
+            position: absolute;
+            height: 55px;
+            width: 90%;
+        }
+
+        .triangleUp {
+            @extend .divider-generic;
+            // position: absolute;
+            background-color: rgba(#f6e6e0, 0.8);
+            -webkit-clip-path: polygon(0 0, 100% 0, 25% 100%);
+            clip-path: polygon(0 0, 100% 0, 25% 100%);
+            // height: 55px;
+            // width: 90%;
+        }
+
+        .triangleDown {
+            @extend .divider-generic;
+            // position: absolute;
+            background-color: rgba(#eeb4aa, 0.8);
+            clip-path: polygon(25% 100%, 100% 0%, 100% 100%, 0 100%, 0 0%);
+            -webkit-clip-path: polygon(25% 100%, 100% 0%, 100% 100%, 0 100%, 0 0%);
+            // height: 55px;
+            // width: 90%;
+        }
+
+        .pentagonUp {
+            @extend .divider-generic;
+            background-color: rgba(#eeb4aa, 0.8);
+            -webkit-clip-path: polygon(20% 0%, 68% 100%, 100% 0%, 0% 0%, 0% 100%);
+            clip-path: polygon(20% 0%, 68% 100%, 100% 0%, 0% 0%, 0% 100%)
+        }
+
+        .pentagonDown {
+            @extend .divider-generic;
+            background-color: rgba(#a1eacd, 0.8);
+            -webkit-clip-path: polygon(68% 100%, 100% 0%, 100% 100%, 0 100%, 20% 0%);
+            clip-path: polygon(68% 100%, 100% 0%, 100% 100%, 0 100%, 20% 0%);
+        }
+
+    }
+
+
+    .skillsContainer {
+        padding: 1rem;
+        background-color: rgba(#eeb4aa, 0.8);
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        .skillList {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .skill {
+                width: 150px;
+                height: 150px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // color: white;
+                .icon {
+                    font-size: 80px;
+                    // color: white;
+                }
+
+                .skillTitle {
+                    font-size: 20px;
+
+                }
+            }
+
+            .skill:hover {
+                color: black;
+                transition: 0.8s;
+            }
+        }
+
+    }
+
+    .expContainer {
+        width: 90%;
+        background-color: rgba(#a1eacd, 0.8);
+        border-radius: 0 0 10px 10px;
+        padding: 30px 0;
+    }
+}
+
+.expContainer{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 930px) {
     .detailsContainer{
-        width: 70%;
-        height: 50px;
-        background-color: white;
+        .bio{
+            flex-direction: column;
+            align-items: center;
+
+            .aboutMe{
+                width: 90% !important;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    .skillsContainer{
+        .skillList{
+            .skill{
+                width: 100px !important;
+                height: 100px !important;
+        
+                .icon{
+                    font-size: 60px !important;
+                }
+            }
+        }
     }
 }

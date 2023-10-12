@@ -1,10 +1,11 @@
 import { FC, ReactElement } from 'react';
 import styles from './index.module.scss';
+import './index.css';
 import logo from 'assets/my_icon.png';
 import { useTranslation } from 'react-i18next'
 import { NAV_ITEMS, USER } from 'Constants';
 import { Link, useLocation } from 'react-router-dom';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Dropdown, DropdownButton, Nav, Navbar } from 'react-bootstrap';
 
 const SideNav: FC = () => {
     const { t, i18n } = useTranslation();
@@ -34,7 +35,7 @@ const SideNav: FC = () => {
             )
         })
         return (
-            <Navbar collapseOnSelect expand="lg" bg="transparent" sticky='top' variant="dark" className={styles.container}>
+            <Navbar collapseOnSelect expand="lg" sticky='top' variant="dark" className={styles.container}>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" className='ml-4 mt-4'/>
                 <Navbar.Brand  href="#home" className='ml-4 mt-2'>{renderLogo()}</Navbar.Brand>
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -46,18 +47,22 @@ const SideNav: FC = () => {
         );
     }
 
-    const langChan = (event: any) => {
-        console.warn(event.target.value)
-        i18n.changeLanguage(event.target.value);
+    const langChan = (lang: string) => {
+        i18n.changeLanguage(lang);
     }
 
     const renderChangeLngButton = () => {
         return (
             <div className={styles.langBtn}>
-                <select name="lang" onChange={langChan} value={i18n.language} >
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                </select>
+                <Dropdown id="lang-button" className={styles.roundedBtn}>
+                    <Dropdown.Toggle className={styles.toggle}>
+                        <span className="bi bi-translate" style={{fontSize: '30px'}}></span>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => langChan('en')} active={i18n.language === 'en'}>English</Dropdown.Item>
+                        <Dropdown.Item onClick={() => langChan('es')} active={i18n.language === 'es'}>Spanish</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             </div>
         )
     }

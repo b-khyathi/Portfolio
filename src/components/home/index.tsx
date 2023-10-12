@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next'
 const HomeComponent: React.FC = () => {
     const {t} = useTranslation();
     return (
-        <div className={styles.mainContainer}>
-                <div className={styles.quote}>
-                    { t('homepage.quote') }
-                </div>
+        <div>
+            <div className={styles.quoteContainer}>
+                    <div className={styles.quote}>
+                        { t('homepage.quote') }
+                    </div>
+            </div>
         </div>
     )
 }

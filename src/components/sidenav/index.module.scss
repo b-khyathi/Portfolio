@@ -1,5 +1,6 @@
 // $active-color : rgb(168, 2, 2);
 $active-color : red;
+$nav-bg : rgba(0, 0, 0, 0.9);
 
 .container{
     width: 100%;
@@ -8,6 +9,7 @@ $active-color : red;
     font-weight: 600;
     text-transform: uppercase;
     color: white;
+    background-color: $nav-bg;
 
     .logo{
         display: flex;
@@ -57,6 +59,13 @@ $active-color : red;
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 2;
+
+    .roundedBtn{
+        .toggle{
+            border-radius: 50%;
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -69,9 +78,9 @@ $active-color : red;
 
 @media screen and (max-width: 992px) {
     .container{
-        background-color: rgba(0, 0, 0, 0.9) !important;
+        background-color: $nav-bg;
         .navItemsContainer{
-            background-color: rgba(0, 0, 0, 0.9) !important;
+            background-color: $nav-bg;
         }
         .navItem{
             width: max-content;
