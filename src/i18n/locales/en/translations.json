@@ -36,7 +36,13 @@
             }
         },
         "experience": {
-            "title": "EXPERIENCE"
+            "title": "EXPERIENCE",
+            "company": {
+                "hashedin": {
+                    "title": "HashedIn By Deloitte",
+                    "description": "Constantly evolving to stay at the forefront of industry trends. This experience has allowed me to contribute meaningfully to innovative projects while honing my skills in a dynamic and forward-thinking work environment."
+                }
+            }
         }
     }
 }

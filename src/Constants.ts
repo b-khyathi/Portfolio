@@ -102,4 +102,13 @@ export const LANG_LIST = [
         code: 'hi',
         title: 'Hindi'
     },
+];
+
+export const EXPERIENCES = [
+    {
+        title: 'about.experience.company.hashedin.title',
+        time: '(2022 - Present)',
+        image: 'Hashedin.jpg',
+        description: 'about.experience.company.hashedin.description'
+    }
 ]
