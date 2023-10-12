@@ -4,6 +4,7 @@ import MyPic from 'assets/my_pic.jpg';
 import { useTranslation } from 'react-i18next';
 import { EXPERIENCES, SKILLS } from 'Constants';
 import { Card } from 'react-bootstrap';
+import SkillsComponent from './skills';
 
 const AboutComponent: FC = () => {
     const { t } = useTranslation();
@@ -40,30 +41,7 @@ const AboutComponent: FC = () => {
             </div>
         );
     }
-
-    const renderSkills = (): ReactElement => {
-        return (
-            <div className={styles.skillsContainer}>
-                <div className={`mt-4 mb-4 ml-3 ${styles.title}`}>
-                    {t('about.skills.title')}
-                </div>
-                <div className={`mb-4 ml-3 ${styles.subTitle}`}>
-                    {t('about.skills.subtitle')}
-                </div>
-                <div className={styles.skillList}>
-                    {
-                        SKILLS.map(skill => (
-                            <div className={styles.skill}>
-                                <i className={`${skill.className} ${styles.icon}`}></i>
-                                <span className={`${styles.skillTitle} mt-3`}>{t(skill.title)}</span>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-        );
-    }
-
+    
     const renderExperienceSection = (): ReactElement => {
         return (
             <div className={`${styles.expContainer}`}>
@@ -92,7 +70,7 @@ const AboutComponent: FC = () => {
         <div className={`${styles.aboutContainer}`} id='about'>
             {renderAboutSection()}
             {renderDivider('lowerTriangle')}
-            {renderSkills()}
+            <SkillsComponent />
             {renderDivider('pentagon')}
             {renderExperienceSection()}
 

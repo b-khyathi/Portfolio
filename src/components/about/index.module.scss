@@ -107,50 +107,6 @@
 
     }
 
-
-    .skillsContainer {
-        padding: 1rem;
-        background-color: rgba(#eeb4aa, 0.8);
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        color: white;
-
-        .skillList {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .skill {
-                width: 150px;
-                height: 150px;
-                margin: 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                cursor: pointer;
-
-                // color: white;
-                .icon {
-                    font-size: 80px;
-                    // color: white;
-                }
-
-                .skillTitle {
-                    font-size: 20px;
-
-                }
-            }
-
-            .skill:hover {
-                color: black;
-                transition: 0.8s;
-            }
-        }
-
-    }
-
     .expContainer {
         width: 90%;
         background-color: rgba(#a1eacd, 0.8);
@@ -184,18 +140,6 @@
             .aboutMe{
                 width: 90% !important;
                 margin-top: 0.5rem;
-            }
-        }
-    }
-    .skillsContainer{
-        .skillList{
-            .skill{
-                width: 100px !important;
-                height: 100px !important;
-        
-                .icon{
-                    font-size: 60px !important;
-                }
             }
         }
     }
