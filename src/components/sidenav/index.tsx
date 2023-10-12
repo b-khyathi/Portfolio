@@ -3,9 +3,9 @@ import styles from './index.module.scss';
 import './index.css';
 import logo from 'assets/my_icon.png';
 import { useTranslation } from 'react-i18next'
-import { NAV_ITEMS, USER } from 'Constants';
+import { LANG_LIST, NAV_ITEMS, USER } from 'Constants';
 import { Link, useLocation } from 'react-router-dom';
-import { Dropdown, DropdownButton, Nav, Navbar } from 'react-bootstrap';
+import { Dropdown, Nav, Navbar } from 'react-bootstrap';
 
 const SideNav: FC = () => {
     const { t, i18n } = useTranslation();
@@ -31,16 +31,16 @@ const SideNav: FC = () => {
         const items: ReactElement[] = [];
         Object.entries(NAV_ITEMS).forEach(([name, link]) => {
             items.push(
-                <Nav.Link as={Link} className={`${styles.navItem} ${link === router.pathname ? styles.active : null}`}  to={link}>{t(`navItems.${name}`)}</Nav.Link>
+                <Nav.Link as={Link} className={`${styles.navItem} ${link === router.pathname ? styles.active : null}`} to={link}>{t(`navItems.${name}`)}</Nav.Link>
             )
         })
         return (
             <Navbar collapseOnSelect expand="lg" sticky='top' variant="dark" className={styles.container}>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" className='ml-4 mt-4'/>
-                <Navbar.Brand  href="#home" className='ml-4 mt-2'>{renderLogo()}</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" className='ml-4 mt-4' />
+                <Navbar.Brand href="#home" className='ml-4 mt-2'>{renderLogo()}</Navbar.Brand>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className={`ml-auto ${styles.navItemsContainer}`}>
-                        {items.map((element: ReactElement) => element)  }
+                        {items.map((element: ReactElement) => element)}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -56,12 +56,14 @@ const SideNav: FC = () => {
             <div className={styles.langBtn}>
                 <Dropdown id="lang-button" className={styles.roundedBtn}>
                     <Dropdown.Toggle className={styles.toggle}>
-                        <span className="bi bi-translate" style={{fontSize: '30px'}}></span>
+                        <span className={`bi bi-translate ${styles.langIcon}`}></span>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => langChan('en')} active={i18n.language === 'en'}>English</Dropdown.Item>
-                        <Dropdown.Item onClick={() => langChan('es')} active={i18n.language === 'es'}>Spanish</Dropdown.Item>
-                        <Dropdown.Item onClick={() => langChan('hi')} active={i18n.language === 'hi'}>Hindi</Dropdown.Item>
+                        {
+                            LANG_LIST.map(langConfig => (
+                                <Dropdown.Item onClick={() => langChan(langConfig.code)} active={i18n.language === langConfig.code}>{langConfig.title}</Dropdown.Item>
+                            ))
+                        }
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
@@ -70,10 +72,10 @@ const SideNav: FC = () => {
 
     return (
         <>
-        {renderNavItems()}
-        {renderChangeLngButton()}
+            {renderNavItems()}
+            {renderChangeLngButton()}
         </>
     )
-    }
-    
+}
+
 export default SideNav

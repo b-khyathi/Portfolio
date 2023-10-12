@@ -10,7 +10,7 @@ const AboutComponent: FC = () => {
 
     const renderDivider = (type: 'lowerTriangle' | 'pentagon'): ReactElement => {
         const upperClass = type === 'lowerTriangle' ? 'triangleUp' : 'pentagonUp';
-        const lowerClass = type === 'lowerTriangle' ? 'triangleDown': 'pentagonDown';
+        const lowerClass = type === 'lowerTriangle' ? 'triangleDown' : 'pentagonDown';
 
         return (
             <div className={styles.divider}>
@@ -55,7 +55,7 @@ const AboutComponent: FC = () => {
                         SKILLS.map(skill => (
                             <div className={styles.skill}>
                                 <i className={`${skill.className} ${styles.icon}`}></i>
-                                <span className={`${styles.skillTitle} mt-3`}>{ t(skill.title) }</span>
+                                <span className={`${styles.skillTitle} mt-3`}>{t(skill.title)}</span>
                             </div>
                         ))
                     }
@@ -65,20 +65,20 @@ const AboutComponent: FC = () => {
     }
 
     const renderExperienceSection = (): ReactElement => {
-        return(
+        return (
             <div className={`${styles.expContainer}`}>
-                <div className={`mt-4 ml-3 mb-4 ${styles.title}`}> { t('about.experience.title') }</div>
+                <div className={`mt-4 ml-3 mb-4 ${styles.title}`}> {t('about.experience.title')}</div>
                 <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+
             </div>
         )
     }

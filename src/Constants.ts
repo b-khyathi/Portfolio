@@ -2,7 +2,7 @@ import AboutComponent from "components/about"
 import ContactComponent from "components/contact"
 import HomeComponent from "components/home"
 
-export const USER= 'Arpit Dadhich'
+export const USER = 'Arpit Dadhich'
 
 export const NAV_ITEMS = {
     home: '/',
@@ -17,14 +17,14 @@ export const ROUTES_CONFIG = [
         Component: HomeComponent
     },
     {
-      path: NAV_ITEMS.about,
-      Component: AboutComponent
-  },
-  {
-    path: NAV_ITEMS.contact,
-    Component: ContactComponent
-}
-  ]
+        path: NAV_ITEMS.about,
+        Component: AboutComponent
+    },
+    {
+        path: NAV_ITEMS.contact,
+        Component: ContactComponent
+    }
+]
 
 export const SKILLS = [
     {
@@ -86,5 +86,20 @@ export const SKILLS = [
         name: 'VS Code',
         title: 'about.skills.skillList.vscode',
         className: 'devicon-vscode-plain',
+    },
+]
+
+export const LANG_LIST = [
+    {
+        code: 'en',
+        title: 'English'
+    },
+    {
+        code: 'es',
+        title: 'Spanish'
+    },
+    {
+        code: 'hi',
+        title: 'Hindi'
     },
 ]
