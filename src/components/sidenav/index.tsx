@@ -61,6 +61,7 @@ const SideNav: FC = () => {
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => langChan('en')} active={i18n.language === 'en'}>English</Dropdown.Item>
                         <Dropdown.Item onClick={() => langChan('es')} active={i18n.language === 'es'}>Spanish</Dropdown.Item>
+                        <Dropdown.Item onClick={() => langChan('hi')} active={i18n.language === 'hi'}>Hindi</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

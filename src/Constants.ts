@@ -28,51 +28,63 @@ export const ROUTES_CONFIG = [
 
 export const SKILLS = [
     {
-        title: 'React',
+        name: 'React',
+        title: 'about.skills.skillList.react',
         className: 'devicon-react-original',
     },
     {
-        title: 'Angular',
+        name: 'Angular',
+        title: 'about.skills.skillList.angular',
         className: 'devicon-angularjs-plain',
     },
     {
-        title: 'HTML',
+        name: 'HTML',
+        title: 'about.skills.skillList.html',
         className: 'devicon-html5-plain',
     },
     {
-        title: 'CSS',
+        name: 'CSS',
+        title: 'about.skills.skillList.css',
         className: 'devicon-css3-plain',
     },
     {
-        title: 'Next JS',
+        name: 'Next JS',
+        title: 'about.skills.skillList.nextjs',
         className: 'devicon-nextjs-original',
     },
     {
-        title: 'Node JS',
+        name: 'Node JS',
+        title: 'about.skills.skillList.nodejs',
         className: 'devicon-nodejs-plain',
     },
     {
-        title: 'SASS',
+        name: 'SASS',
+        title: 'about.skills.skillList.sass',
         className: 'devicon-sass-original',
     },
     {
-        title: 'Javascript',
+        name: 'Javascript',
+        title: 'about.skills.skillList.javascript',
         className: 'devicon-javascript-plain',
     },
     {
-        title: 'Typescript',
+        name: 'Typescript',
+        title: 'about.skills.skillList.typescript',
         className: 'devicon-typescript-plain',
     },
     {
-        title: 'GitHub',
+        name: 'GitHub',
+        title: 'about.skills.skillList.github',
         className: 'devicon-github-original',
     },
     {
-        title: 'BitBucket',
+        name: 'BitBucket',
+        title: 'about.skills.skillList.bitbucket',
         className: 'devicon-bitbucket-original',
     },
     {
-        title: 'VS Code',
+        name: 'VS Code',
+        title: 'about.skills.skillList.vscode',
         className: 'devicon-vscode-plain',
     },
 ]

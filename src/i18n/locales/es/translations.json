@@ -9,5 +9,34 @@
         "about": "acerca de",
         "contact": "contacto",
         "login": "acceso" 
+    },
+    "about": {
+        "title": "¿Quién es Arpit?",
+        "subtitle": "Un desarrollador Full Stack impulsado por la curiosidad que crea mundos digitales con Angular, React y Node.",
+        "bio-1": "Hola, visitante, soy un desarrollador Full Stack experimentado con un sólido dominio de Angular, React y Node.js. Mi experiencia abarca todo el espectro del desarrollo web, lo que me permite navegar sin problemas tanto en el ámbito del front-end como del back-end. Con el compromiso de mantenerme al tanto de las tendencias de la industria, estoy preparado para aportar innovación y excelencia a cada proyecto, proporcionando aplicaciones web sólidas y centradas en el usuario.",
+        "bio-2": "Aprovechando Angular y React, creo interfaces de usuario atractivas y receptivas que brindan experiencias de usuario excepcionales. En el lado del servidor, aprovecho el poder de Node.js para crear aplicaciones escalables y eficientes. Competente en gestión de bases de datos, diseño de API y control de versiones, me aseguro de que todo el proceso de desarrollo sea coherente y esté bien estructurado.",
+        "bio-3": "Mis habilidades para resolver problemas, combinadas con una habilidad especial para optimizar los canales de CI/CD, me permiten ofrecer soluciones de alta calidad basadas en el rendimiento. No estoy disponible para ningún trabajo independiente, pero no dudes en comunicarte y saludar. prometo no morder 😉",
+
+        "skills": {
+            "title": "HABILIDADES Y HERRAMIENTAS",
+            "subtitle": "Mi caja de herramientas y cosas que puedo hacer",
+            "skillList": {
+                "react": "Reaccionar",
+                "angular": "Angular",
+                "html": "HTML",
+                "css": "CSS",
+                "nextjs": "Siguiente JS",
+                "nodejs": "Nodo JS",
+                "sass": "HABLAR CON DESCARO A",
+                "javascript": "JavaScript",
+                "typescript": "Mecanografiado",
+                "github": "GitHub",
+                "bitbucket": "BitBucket",
+                "vscode": "Código VS"
+            }
+        },
+        "experience": {
+            "title": "EXPERIENCIA"
+        }
     }
 }

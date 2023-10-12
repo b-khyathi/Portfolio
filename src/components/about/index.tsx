@@ -55,7 +55,7 @@ const AboutComponent: FC = () => {
                         SKILLS.map(skill => (
                             <div className={styles.skill}>
                                 <i className={`${skill.className} ${styles.icon}`}></i>
-                                <span className={`${styles.skillTitle} mt-3`}>{skill.title}</span>
+                                <span className={`${styles.skillTitle} mt-3`}>{ t(skill.title) }</span>
                             </div>
                         ))
                     }

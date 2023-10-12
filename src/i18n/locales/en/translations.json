@@ -19,7 +19,21 @@
 
         "skills": {
             "title": "SKILLS AND TOOLS",
-            "subtitle": "My Toolbox & Things I Can Do"
+            "subtitle": "My Toolbox & Things I Can Do",
+            "skillList": {
+                "react": "React",
+                "angular": "Angular",
+                "html": "HTML",
+                "css": "CSS",
+                "nextjs": "Next JS",
+                "nodejs": "Node JS",
+                "sass": "SASS",
+                "javascript": "Javascript",
+                "typescript": "Typescript",
+                "github": "GitHub",
+                "bitbucket": "BitBucket",
+                "vscode": "VS Code"
+            }
         },
         "experience": {
             "title": "EXPERIENCE"
