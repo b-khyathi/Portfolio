@@ -41,7 +41,7 @@ const AboutComponent: FC = () => {
             </div>
         );
     }
-    
+
     const renderExperienceSection = (): ReactElement => {
         return (
             <div className={`${styles.expContainer}`}>
@@ -61,7 +61,6 @@ const AboutComponent: FC = () => {
                         ))
                     }
                 </div>
-
             </div>
         )
     }
